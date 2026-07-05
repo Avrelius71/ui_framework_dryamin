@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 customizable_desk_loc = (By.LINK_TEXT, 'Customizable Desk')
 products_breadcrumb_loc = (By.XPATH, '//ol[contains(@class, "breadcrumb")]//a[@href="/shop"]')
-category_title_loc = (By.XPATH, '//span[@class="d-inline-block" and text()="Desks"]')
+category_title_loc = (By.CSS_SELECTOR, 'span.d-inline-block')
 
 
 class DesksPage(BasePage):
@@ -16,5 +16,5 @@ class DesksPage(BasePage):
     def clic_products_breadcrumb(self):
         self.find(products_breadcrumb_loc).click()
 
-    def assert_desks_title(self):
-        assert self.find(category_title_loc).text == 'Desks'
+    def assert_category_title(self, expected_title):
+        assert self.find(category_title_loc).text == expected_title

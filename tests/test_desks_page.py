@@ -11,4 +11,4 @@ class TestDesksPage:
 
     def test_desks_category_title(self, desks_page):
         desks_page.open_page()
-        desks_page.assert_desks_title()
+        desks_page.assert_category_title("Desks")

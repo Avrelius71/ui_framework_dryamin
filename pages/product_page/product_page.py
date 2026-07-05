@@ -16,5 +16,5 @@ class ProductPage(BasePage):
     def clic_multimedia_breadcrumb(self):
         self.find(multimedia_breadcrumb_loc).click()
 
-    def assert_product_title(self):
-        assert self.find(product_title_loc).text == 'Office Design Software'
+    def assert_product_title(self, expected_title):
+        assert self.find(product_title_loc).text == expected_title

@@ -11,4 +11,4 @@ class TestProductPage:
 
     def test_product_title(self, product_page):
         product_page.open_page()
-        product_page.assert_product_title()
+        product_page.assert_product_title("Office Design Software")
